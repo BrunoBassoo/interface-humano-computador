@@ -54,3 +54,6 @@ mysql
 11) Qual é o contexto de uso dessa aplicação? (esse já é um conceito de IHC que professor explicou na sala)
 
 Internet
+
+## Desenvolvimento
+[Análise de Concorrência](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2_analise_de_concorrencia.md)
