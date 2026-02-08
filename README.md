@@ -1,5 +1,4 @@
-# interface-humano-computador
-
+# Behavioral Visual Replicating AI
 Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos necessários para aprovação na disciplina de Interface Humano-Computador (CC8122) do curso de Ciencia da Computação, orientado pelo Prof. Dr. Plino Thomaz Aquino Junior.
 
 # Conhecendo o Problema
