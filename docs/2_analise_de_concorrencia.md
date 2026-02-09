@@ -1,6 +1,6 @@
-### 1.0 ANALISE DE CONCORRÊNCIA
+### 1 - ANALISE DE CONCORRÊNCIA
 
-## Smart Eye – Driver Monitoring System (DMS)
+## 1.0 Smart Eye – Driver Monitoring System (DMS)
 
 **O que é:**  
 Sistema avançado de monitoramento do motorista que utiliza inteligência artificial, visão computacional e eye tracking para identificar estados como distração, fadiga e sonolência. É amplamente utilizado por montadoras e fornecedores automotivos para atender requisitos de segurança veicular.
@@ -26,7 +26,7 @@ Sistema avançado de monitoramento do motorista que utiliza inteligência artifi
 
 ---
 
-## Tobii – Driver Monitoring System (DMS)
+## 1.1 Tobii – Driver Monitoring System (DMS)
 
 **O que é:**  
 Plataforma de monitoramento ocular automotivo focada em segurança veicular e conformidade regulatória, capaz de operar em tempo real mesmo em condições adversas de iluminação.
@@ -46,10 +46,9 @@ Plataforma de monitoramento ocular automotivo focada em segurança veicular e co
 # Imagens
 
 
-
 ---
 
-## Eyeware – GazeSense Driver Monitoring
+## 1.2 Eyeware – GazeSense Driver Monitoring
 
 **O que é:**  
 SDK de rastreamento ocular 3D voltado para desenvolvimento e prototipagem de sistemas de monitoramento de motoristas, fornecendo dados de gaze e pose de cabeça via APIs.
@@ -76,7 +75,7 @@ sessao de jogos deles
 
 ---
 
-## Neonode – Driver Monitoring Software
+## 1.3 Neonode – Driver Monitoring Software
 
 **O que é:**  
 Solução de monitoramento do motorista baseada em inteligência artificial, focada em conformidade com normas de segurança veicular, como Euro NCAP e EU GSR, detectando distração e fadiga.
@@ -94,7 +93,6 @@ Solução de monitoramento do motorista baseada em inteligência artificial, foc
 - Foco maior em conformidade do que em análise exploratória  
 
 ## Imagens
-
 <img width="2507" height="1254" alt="image" src="https://github.com/user-attachments/assets/3b9bfc5b-fe18-4cf6-a2fd-0e21985e6158" />
 <img width="2514" height="1266" alt="image" src="https://github.com/user-attachments/assets/ef9b990a-9c3b-4e5a-942d-5ac26b945e60" />
 <img width="2523" height="1283" alt="image" src="https://github.com/user-attachments/assets/710d6fb9-5750-4854-b2e8-2f66ba05afcb" />
