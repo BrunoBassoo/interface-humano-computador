@@ -1,4 +1,7 @@
 ### 1.0 ANALISE DE CONCORRÊNCIA
+
+## Smart Eye – Driver Monitoring System (DMS)
+
 **O que é:**  
 Sistema avançado de monitoramento do motorista que utiliza inteligência artificial, visão computacional e eye tracking para identificar estados como distração, fadiga e sonolência. É amplamente utilizado por montadoras e fornecedores automotivos para atender requisitos de segurança veicular.
 
