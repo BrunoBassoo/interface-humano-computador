@@ -11,11 +11,11 @@ Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos nece
 
 2) Título Original do TCC:
 
-- Analise de comportamento visual de condutores em ambiente real
+Analise de comportamento visual de condutores em ambiente real
   
 3) Nome do orientador:
 
-- Victor Varela
+Victor Varela
 
 4) Previsto desenvolver Interface? (   ) Sim     (X) Não
 
