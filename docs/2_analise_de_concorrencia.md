@@ -1,146 +1,97 @@
-# Análise de Concorrência  
-
-## Identificação dos Principais Concorrentes
-
-### 1. Smart Eye – Driver Monitoring System
-
-- **Link:** https://www.smarteye.se/solutions/automotive/driver-monitoring-system/
-- **Descrição:**  
-  Sistema avançado de monitoramento do motorista utilizando IA, visão computacional e eye tracking. Detecta distração, fadiga, sonolência e comportamento de risco. Amplamente adotado por montadoras globais.
-
-- **Imagens de Interface (para coleta):**  
-  - Dashboards de atenção do motorista  
-  - Alertas visuais de distração/fadiga  
-  - Visualização de posição da cabeça e olhar  
-
----
-
-### 2. Tobii – Driver Monitoring System (DMS)
-
-- **Link:** https://www.tobii.com/products/automotive/tobii-dms
-- **Descrição:**  
-  Plataforma robusta de eye tracking automotivo focada em segurança veicular e conformidade regulatória. Atua em tempo real mesmo em condições adversas de iluminação.
-
-- **Imagens de Interface (para coleta):**  
-  - Telas de monitoramento em tempo real  
-  - Indicadores de atenção do motorista  
-  - Relatórios de eventos críticos  
-
----
-
-### 3. Eyeware – GazeSense Driver Monitoring
-
-- **Link:** https://www.eyeware.tech/driver-monitoring/
-- **Descrição:**  
-  SDK de rastreamento ocular 3D utilizado para desenvolvimento e prototipagem de sistemas DMS. Fornece dados de olhar, pose de cabeça e APIs para integração personalizada.
-
-- **Imagens de Interface (para coleta):**  
-  - Painel de visualização de gaze  
-  - Ferramentas de calibração  
-  - Gráficos de dados de atenção  
-
----
-
-### 4. Neonode – Driver Monitoring Software
-
-- **Link:** https://neonode.com/solutions/driver-monitoring
-- **Descrição:**  
-  Solução de monitoramento de motorista baseada em IA, focada em conformidade com normas como Euro NCAP e EU GSR. Detecta distração, fadiga e comportamento inseguro.
-
-- **Imagens de Interface (para coleta):**  
-  - Telas de status do motorista  
-  - Alertas visuais embarcados  
-  - Indicadores de risco  
-
----
-
-## Características e Funcionalidades
-
-| Concorrente | Eye Tracking | Detecção de Fadiga | Detecção de Distração | Alertas em Tempo Real | Relatórios |
-|------------|-------------|--------------------|-----------------------|----------------------|------------|
-| Smart Eye DMS | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Tobii DMS | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Eyeware GazeSense | ✔️ | ✔️ | ✔️ | ❌* | ❌* |
-| Neonode DMS | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-
-\* Depende da implementação feita pelo integrador.
-
----
-
-## Experiência do Usuário (UX)
+### 1.0 ANALISE DE CONCORRÊNCIA
+**O que é:**  
+Sistema avançado de monitoramento do motorista que utiliza inteligência artificial, visão computacional e eye tracking para identificar estados como distração, fadiga e sonolência. É amplamente utilizado por montadoras e fornecedores automotivos para atender requisitos de segurança veicular.
 
 ### Pontos Positivos
-
-- Interfaces focadas em **visualização rápida de estados críticos**
-- Uso consistente de **cores, ícones e alertas**
-- Dashboards que traduzem dados complexos em métricas simples
-- Feedback em tempo real aumenta a percepção de segurança
+- Interface visual limpa e organizada  
+- Indicadores claros de estados críticos do motorista  
+- Visualização da posição da cabeça e direção do olhar  
+- Feedback visual imediato para eventos relevantes  
+- Solução consolidada e validada pela indústria automotiva  
 
 ### Pontos Negativos
+- Interface voltada principalmente para usuários técnicos  
+- Pouca flexibilidade de personalização visual  
+- Foco em monitoramento em tempo real, não em predição  
+- Sistema fechado, com baixa transparência do funcionamento interno  
 
-- Muitas soluções não possuem interface final pronta (foco em SDK)
-- UX frequentemente voltada a engenheiros, não a usuários finais
-- Curva de aprendizado elevada em ferramentas muito técnicas
+## Imagens:
 
----
 
-## Preços e Modelos de Negócio
-
-| Plataforma | Modelo de Negócio | Preço |
-|-----------|------------------|--------|
-| Smart Eye DMS | Licenciamento OEM / por volume | Sob consulta |
-| Tobii DMS | Licença industrial automotiva | Sob consulta |
-| Eyeware GazeSense | Licença de SDK | Sob consulta |
-| Neonode DMS | Licença por projeto | Sob consulta |
-
-> Observação: preços não são públicos e variam conforme volume, integração e escopo do projeto.
+<img width="2525" height="1282" alt="image" src="https://github.com/user-attachments/assets/74ddaff0-e4ae-495b-b480-bb9ac1a7b323" />
+<img width="2520" height="1278" alt="image" src="https://github.com/user-attachments/assets/2f2c2be9-bf1c-46f6-99e8-7d7dc911612a" />
 
 ---
 
-## Padrões e Tendências do Mercado
+## Tobii – Driver Monitoring System (DMS)
 
-- Forte foco em **segurança veicular e regulamentações**
-- Uso intensivo de **IA e visão computacional**
-- Interfaces minimalistas e orientadas a alertas
-- Crescente demanda por **dados explicáveis e visualizações claras**
-- Integração com sistemas ADAS e veículos semi-autônomos
-
----
-
-## Sumarização dos Resultados
-
-A análise mostra que os principais concorrentes:
-- Atuam majoritariamente como **plataformas técnicas ou SDKs**
-- Priorizam robustez e precisão em detrimento de UX final
-- Utilizam padrões visuais similares para alertas e status
-- Oferecem oportunidades claras para inovação em interface e usabilidade
-
----
-
-## Pontos Positivos e Negativos
+**O que é:**  
+Plataforma de monitoramento ocular automotivo focada em segurança veicular e conformidade regulatória, capaz de operar em tempo real mesmo em condições adversas de iluminação.
 
 ### Pontos Positivos
-
-- Alta confiabilidade técnica
-- Métricas bem definidas de atenção e fadiga
-- Interfaces consistentes para alertas críticos
+- Visualização em tempo real dos dados de atenção  
+- Controle frame a frame para análises detalhadas  
+- Possibilidade de ativar e desativar camadas visuais  
+- Interface madura e amplamente utilizada em pesquisas e indústria  
 
 ### Pontos Negativos
+- Dependência de hardware específico de eye tracking  
+- Curva de aprendizado elevada para novos usuários  
+- Pouco foco em simulação ou análise preditiva  
+- Customização limitada da interface
 
-- Falta de foco em UX para usuários finais
-- Pouca transparência visual do funcionamento do sistema
-- Interfaces muitas vezes pouco flexíveis
+# Imagens
 
----
 
-## Recomendações para o Software em Desenvolvimento
-
-- Criar um **dashboard central de atenção do motorista**
-- Utilizar **feedback visual e sonoro claro**
-- Oferecer **configuração de sensibilidade e alertas**
-- Priorizar **visualizações simples e intuitivas**
-- Facilitar exportação de relatórios e dados
-- Pensar na interface tanto para **tempo real quanto análise posterior**
 
 ---
 
+## Eyeware – GazeSense Driver Monitoring
+
+**O que é:**  
+SDK de rastreamento ocular 3D voltado para desenvolvimento e prototipagem de sistemas de monitoramento de motoristas, fornecendo dados de gaze e pose de cabeça via APIs.
+
+### Pontos Positivos
+- Interface técnica clara para visualização de gaze  
+- Ferramentas de calibração bem definidas  
+- Gráficos detalhados de dados de atenção  
+- Alta flexibilidade para integração em sistemas personalizados  
+
+### Pontos Negativos
+- Não oferece uma interface final pronta para o usuário  
+- Forte dependência da implementação feita pelo integrador  
+- Visual pouco intuitivo para usuários não técnicos  
+- Ausência de dashboards de alto nível  
+
+## Imagens
+
+<img width="2526" height="1276" alt="image" src="https://github.com/user-attachments/assets/4dcfa104-48c2-41fe-a0eb-d90c4b38ecfe" />
+<img width="2518" height="1265" alt="image" src="https://github.com/user-attachments/assets/b8d5f642-386d-4753-9002-459408467804" />
+
+sessao de jogos deles
+<img width="2525" height="1273" alt="image" src="https://github.com/user-attachments/assets/270bd725-c307-4bb4-ac87-b380c850f46f" />
+
+---
+
+## Neonode – Driver Monitoring Software
+
+**O que é:**  
+Solução de monitoramento do motorista baseada em inteligência artificial, focada em conformidade com normas de segurança veicular, como Euro NCAP e EU GSR, detectando distração e fadiga.
+
+### Pontos Positivos
+- Interfaces simples e orientadas a status do motorista  
+- Alertas visuais claros para situações de risco  
+- Indicadores de atenção fáceis de interpretar  
+- Forte alinhamento com requisitos regulatórios  
+
+### Pontos Negativos
+- Interface com pouca profundidade analítica  
+- Baixa transparência dos dados coletados  
+- Personalização visual limitada  
+- Foco maior em conformidade do que em análise exploratória  
+
+## Imagens
+
+<img width="2507" height="1254" alt="image" src="https://github.com/user-attachments/assets/3b9bfc5b-fe18-4cf6-a2fd-0e21985e6158" />
+<img width="2514" height="1266" alt="image" src="https://github.com/user-attachments/assets/ef9b990a-9c3b-4e5a-942d-5ac26b945e60" />
+<img width="2523" height="1283" alt="image" src="https://github.com/user-attachments/assets/710d6fb9-5750-4854-b2e8-2f66ba05afcb" />
