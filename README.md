@@ -66,3 +66,6 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 ## Desenvolvimento
 [Análise de Concorrência](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2_analise_de_concorrencia.md)
+
+[Personas](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3_Personas.md)
+
