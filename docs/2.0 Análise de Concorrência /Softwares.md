@@ -25,7 +25,6 @@ Sistema avançado de monitoramento do motorista que utiliza inteligência artifi
 <img width="2520" height="1278" alt="image" src="https://github.com/user-attachments/assets/2f2c2be9-bf1c-46f6-99e8-7d7dc911612a" />
 
 ---
-
 ## 1.1 Tobii – Driver Monitoring System (DMS)
 
 **O que é:**  
@@ -44,6 +43,7 @@ Plataforma de monitoramento ocular automotivo focada em segurança veicular e co
 - Customização limitada da interface
 
 # Imagens
+
 
 
 ---
