@@ -121,7 +121,7 @@
 **“Quero modelar atenção humana para melhorar sistemas autônomos.”**
 
 ### Foto
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/c525d06d-a4cc-425e-931c-fd78f51c5d1f" />
+<img width="300" height="450" alt="image" src="https://github.com/user-attachments/assets/c525d06d-a4cc-425e-931c-fd78f51c5d1f" />
 
 ### Identidade  
 - Nome: Bárbara Souza  
@@ -178,7 +178,7 @@
 **“Preciso transformar isso em produto escalável.”**
 
 ### Foto
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/444ae3ac-d32b-4e37-9e69-78a920211267" />
+<img width="300" height="450" alt="image" src="https://github.com/user-attachments/assets/444ae3ac-d32b-4e37-9e69-78a920211267" />
 
 ### Identidade  
 - Nome: Poliana Ribeiro  
