@@ -6,7 +6,7 @@ Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos nece
 
 - Bruno Arthur Basso Silva - 22.123.067-5
 - Gabriela Molina Ciocci - 22.222.032-9
-- Guilherme de Albuquerque Barboza - 22.224.024-4
+- Guilherme Barboza de Albuquerque - 22.224.024-4
 - Sergio Oliveira Martins - 22.222.021-2
 
 #### 2) Título Original do TCC:
