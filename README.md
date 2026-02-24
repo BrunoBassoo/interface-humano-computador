@@ -74,9 +74,9 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 ### 2) Personas
 
-##### [2.1 Características](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+##### [2.1 Características](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Caracter%C3%ADsticas.md)
 
-##### [2.2 Jornada do Usuário](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+##### [2.2 Jornada do Usuário](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Jornada%20de%20Usu%C3%A1rio.md)
 
-##### [2.3 Mapa de Empatia](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+##### [2.3 Mapa de Empatia](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Mapas%20de%20Empatia.md)
 
