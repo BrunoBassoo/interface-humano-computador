@@ -68,7 +68,15 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 ## Desenvolvimento
 
-#### 1) [Análise de Concorrência](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2_analise_de_concorrencia.md)
+### 1) Análise de Concorrência
 
-#### 2) [Personas](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+#### [1.1 Empresas Concorrentes](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2.0%20An%C3%A1lise%20de%20Concorr%C3%AAncia%20/Softwares.md)
+
+### 2) Personas
+
+##### [2.1 Características](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+
+##### [2.2 Jornada do Usuário](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
+
+##### [2.3 Mapa de Empatia](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0 Personas)
 
