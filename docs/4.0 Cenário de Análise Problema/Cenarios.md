@@ -9,35 +9,38 @@
 Gustavo tem 22 anos e dirige todos os dias para a faculdade.  
 Em uma manhã movimentada, ao mudar de faixa próximo a um cruzamento, quase atropelou um pedestre que atravessava fora da faixa. Ele só percebeu a presença da pessoa no último instante.
 
-O susto foi grande. Nos dias seguintes, passou a dirigir com receio, questionando se realmente estava atento ao ambiente ou apenas reagindo automaticamente às situações. Começou a perceber que talvez não estivesse distribuindo seu olhar corretamente ao dirigir.
+O susto o deixou inseguro. Nos dias seguintes, passou a se questionar se realmente prestava atenção no ambiente ou apenas reagia automaticamente às situações. Percebeu que precisava entender melhor como distribuía seu olhar durante a direção.
 
-Ao conversar com colegas, descobriu uma plataforma capaz de analisar padrões de atenção visual e decidiu utilizá-la para entender seu comportamento ao volante.
+Ao descobrir a plataforma de análise de atenção visual, viu uma oportunidade de analisar seu comportamento com base em dados.
 
 ---
 
 ## 2. Perguntas de Refinamento
 
 - **Q1. Quem é o usuário?**
-- **Q2. Qual situação-problema ocorreu?**
-- **Q3. O que motivou a busca pela plataforma?**
-- **Q4. Como ele utiliza a ferramenta?**
-- **Q5. Quais dados são processados?**
-- **Q6. Quais funcionalidades são usadas?**
-- **Q7. Qual resultado é obtido?**
+- **Q2. Qual contexto de uso (onde e quando ocorre)?**
+- **Q3. Qual situação-problema ocorreu?**
+- **Q4. Quais sentimentos ou impactos o problema gerou?**
+- **Q5. Qual objetivo o usuário deseja alcançar?**
+- **Q6. Por que decidiu utilizar a plataforma?**
+- **Q7. Como ele utiliza a ferramenta?**
+- **Q8. Quais dados são processados pelo sistema?**
+- **Q9. Quais funcionalidades são utilizadas?**
+- **Q10. Qual resultado é obtido após o uso?**
 
 ---
 
 ## 3. História Reformulada com Respostas Sinalizadas
 
-Gustavo, estudante universitário de 22 anos que dirige diariamente para a faculdade [Q1], vivenciou uma situação crítica ao quase atropelar um pedestre durante uma mudança de faixa em um cruzamento movimentado [Q2].
+Gustavo, estudante universitário de 22 anos [Q1], dirige diariamente para a faculdade em horários de tráfego intenso pela manhã [Q2]. Em um desses dias, quase atropelou um pedestre ao mudar de faixa em um cruzamento movimentado [Q3].
 
-Após o ocorrido, passou a questionar seu padrão de atenção visual e decidiu buscar uma ferramenta que o ajudasse a compreender seu comportamento ao volante [Q3].
+O ocorrido o deixou assustado e inseguro, fazendo-o questionar sua atenção ao volante [Q4]. Seu objetivo passou a ser compreender seu padrão de atenção visual e tornar sua condução mais segura [Q5].
 
-Ele passou a utilizar a plataforma enviando vídeos de suas conduções gravados com eye tracker por meio da interface de upload [Q4]. Esses vídeos continham dados de fixações oculares, detecção de faixa e objetos identificados na via [Q5].
+Ao conhecer a plataforma, decidiu utilizá-la para analisar seu comportamento com base em dados reais [Q6]. Ele enviou vídeos de suas conduções, gravados com eye tracker, por meio da interface de upload [Q7].
 
-No dashboard individual, analisou heatmaps de atenção, comparação entre olhar real e olhar predito pela IA e gerou relatórios com trechos críticos [Q6].
+O sistema processou fixações oculares, detecção de faixa, objetos na via e eventos de mudança de faixa [Q8]. No dashboard individual, Gustavo visualizou heatmaps, comparação entre olhar real e olhar predito, métricas de antecipação e extraiu relatórios detalhados [Q9].
 
-Com base nas análises, ajustou sua antecipação ao checar retrovisores antes das mudanças de faixa, passando a dirigir com maior segurança e consciência situacional [Q7].
+Com base nas análises, passou a antecipar melhor suas checagens de retrovisor e melhorou sua consciência situacional, aumentando sua segurança ao dirigir [Q10].
 
 ---
 
@@ -45,37 +48,38 @@ Com base nas análises, ajustou sua antecipação ao checar retrovisores antes d
 
 ## 1. História Inicial
 
-Rogério tem 45 anos e trabalha como representante comercial, passando grande parte da semana dirigindo entre cidades. Sempre se considerou um motorista experiente.
+Rogério tem 45 anos e trabalha como representante comercial, viajando frequentemente de carro entre cidades. Sempre se considerou um motorista experiente.
 
-Recentemente, sua empresa passou a exigir indicadores objetivos de segurança no trânsito. Apesar da experiência, ele não possuía dados concretos que comprovassem seu padrão de direção.
-
-Ele decidiu buscar uma solução que pudesse transformar sua experiência prática em métricas verificáveis.
+Recentemente, sua empresa passou a exigir indicadores objetivos de segurança no trânsito. Ele percebeu que não possuía dados concretos que comprovassem seu padrão de direção.
 
 ---
 
 ## 2. Perguntas de Refinamento
 
 - **Q1. Quem é o usuário?**
-- **Q2. Qual situação ou necessidade existe?**
-- **Q3. O que motivou o uso da plataforma?**
-- **Q4. Como ele utiliza a ferramenta?**
-- **Q5. Quais dados são processados?**
-- **Q6. Quais funcionalidades são utilizadas?**
-- **Q7. Qual resultado é obtido?**
+- **Q2. Qual contexto de uso (onde e quando ocorre)?**
+- **Q3. Qual situação-problema ocorreu?**
+- **Q4. Quais sentimentos ou impactos o problema gerou?**
+- **Q5. Qual objetivo o usuário deseja alcançar?**
+- **Q6. Por que decidiu utilizar a plataforma?**
+- **Q7. Como ele utiliza a ferramenta?**
+- **Q8. Quais dados são processados pelo sistema?**
+- **Q9. Quais funcionalidades são utilizadas?**
+- **Q10. Qual resultado é obtido após o uso?**
 
 ---
 
 ## 3. História Reformulada com Respostas Sinalizadas
 
-Rogério, representante comercial de 45 anos que dirige frequentemente a trabalho [Q1], passou a enfrentar a exigência da empresa por métricas objetivas de segurança [Q2].
+Rogério, representante comercial de 45 anos [Q1], dirige longas distâncias semanalmente em rodovias e centros urbanos [Q2]. Embora experiente, passou a enfrentar a exigência da empresa por métricas objetivas de segurança [Q3].
 
-Para validar seu desempenho e acompanhar sua evolução, decidiu utilizar a plataforma de análise de atenção visual [Q3].
+Essa cobrança gerou preocupação sobre como comprovar seu desempenho profissional [Q4]. Seu objetivo tornou-se validar sua direção com dados concretos e acompanhar sua evolução [Q5].
 
-Ele passou a enviar vídeos periódicos de suas viagens por meio da interface de upload [Q4], permitindo que o sistema analisasse fixações oculares, mudanças de faixa e objetos detectados na via [Q5].
+Ao conhecer a plataforma, decidiu adotá-la como ferramenta de monitoramento [Q6]. Enviou vídeos periódicos de suas viagens pela interface de upload [Q7].
 
-No dashboard individual, acompanhava métricas consolidadas e exportava relatórios, enquanto a empresa acessava apenas o dashboard administrativo com dados agregados [Q6].
+O sistema analisou fixações oculares, mudanças de faixa, objetos detectados e tempo de antecipação [Q8]. Rogério utilizou o dashboard individual, exportou relatórios e sua empresa acompanhou dados agregados pelo dashboard administrativo [Q9].
 
-Ao revisar os dados, identificou pontos de melhoria em situações de tráfego intenso e ajustou seu comportamento, promovendo melhoria contínua baseada em evidências [Q7].
+Com isso, conseguiu identificar pontos de melhoria e passou a monitorar continuamente seu desempenho, promovendo melhorias baseadas em evidências [Q10].
 
 ---
 
@@ -85,35 +89,36 @@ Ao revisar os dados, identificou pontos de melhoria em situações de tráfego i
 
 Bárbara tirou a carteira recentemente e ainda sente insegurança ao dirigir, especialmente ao mudar de faixa em vias rápidas.
 
-Ela frequentemente fica em dúvida sobre onde deve olhar e quando realizar checagens visuais, o que gera ansiedade durante a condução.
-
-Ao conhecer a plataforma, viu nela uma ferramenta de aprendizado para melhorar sua confiança ao volante.
+Ela frequentemente não sabe para onde direcionar o olhar e sente ansiedade em situações de tráfego mais intenso.
 
 ---
 
 ## 2. Perguntas de Refinamento
 
-- **Q1. Quem é a usuária?**
-- **Q2. Qual dificuldade ela enfrenta?**
-- **Q3. O que motivou o uso da plataforma?**
-- **Q4. Como ela utiliza a ferramenta?**
-- **Q5. Quais dados são processados?**
-- **Q6. Quais funcionalidades são utilizadas?**
-- **Q7. Qual resultado é obtido?**
+- **Q1. Quem é o usuário?**
+- **Q2. Qual contexto de uso (onde e quando ocorre)?**
+- **Q3. Qual situação-problema ocorreu?**
+- **Q4. Quais sentimentos ou impactos o problema gerou?**
+- **Q5. Qual objetivo o usuário deseja alcançar?**
+- **Q6. Por que decidiu utilizar a plataforma?**
+- **Q7. Como ele utiliza a ferramenta?**
+- **Q8. Quais dados são processados pelo sistema?**
+- **Q9. Quais funcionalidades são utilizadas?**
+- **Q10. Qual resultado é obtido após o uso?**
 
 ---
 
 ## 3. História Reformulada com Respostas Sinalizadas
 
-Bárbara, recém-habilitada e com pouca experiência ao volante [Q1], sente insegurança principalmente ao realizar mudanças de faixa em vias rápidas [Q2].
+Bárbara, recém-habilitada e com pouca experiência ao volante [Q1], dirige principalmente em vias urbanas e rodovias movimentadas [Q2]. Ela sente insegurança ao realizar mudanças de faixa [Q3].
 
-Para compreender melhor seu padrão de atenção e reduzir sua ansiedade, decidiu utilizar a plataforma como ferramenta de aprendizado [Q3].
+Essa insegurança gera ansiedade e tensão durante a condução [Q4]. Seu objetivo é ganhar confiança e aprender a distribuir melhor sua atenção visual [Q5].
 
-Ela enviou vídeos de suas conduções gravados com eye tracker pela interface de upload [Q4], permitindo que o sistema analisasse fixações oculares, contexto da via e objetos detectados [Q5].
+Ao conhecer a plataforma, decidiu utilizá-la como ferramenta de aprendizado [Q6]. Enviou vídeos de suas conduções gravados com eye tracker por meio da interface de upload [Q7].
 
-No dashboard individual, visualizou comparações entre olhar real e olhar predito, heatmaps e métricas de antecipação, além de gerar relatórios para revisão [Q6].
+O sistema processou suas fixações oculares, objetos detectados e contexto da via [Q8]. No dashboard individual, visualizou heatmaps, métricas de antecipação e relatórios com trechos críticos [Q9].
 
-Com o tempo, passou a antecipar melhor suas checagens laterais e ganhou maior confiança ao dirigir [Q7].
+Com o uso contínuo, passou a antecipar melhor suas checagens visuais e aumentou sua confiança ao dirigir [Q10].
 
 ---
 
@@ -123,34 +128,35 @@ Com o tempo, passou a antecipar melhor suas checagens laterais e ganhou maior co
 
 Poliana é pesquisadora na área de mobilidade urbana e comportamento visual no trânsito.
 
-Ela enfrenta dificuldades para coletar dados naturalísticos e estruturados sobre padrões reais de atenção visual de motoristas.
-
-Ao conhecer a plataforma, percebeu que poderia utilizá-la como apoio metodológico para suas pesquisas acadêmicas.
+Ela enfrenta dificuldades para obter dados naturalísticos estruturados sobre padrões reais de atenção visual de motoristas.
 
 ---
 
 ## 2. Perguntas de Refinamento
 
-- **Q1. Quem é a usuária?**
-- **Q2. Qual problema ou contexto existe?**
-- **Q3. O que motivou o uso da plataforma?**
-- **Q4. Como ela utiliza a ferramenta?**
-- **Q5. Quais dados são processados?**
-- **Q6. Quais funcionalidades são utilizadas?**
-- **Q7. Qual resultado é obtido?**
+- **Q1. Quem é o usuário?**
+- **Q2. Qual contexto de uso (onde e quando ocorre)?**
+- **Q3. Qual situação-problema ocorreu?**
+- **Q4. Quais sentimentos ou impactos o problema gerou?**
+- **Q5. Qual objetivo o usuário deseja alcançar?**
+- **Q6. Por que decidiu utilizar a plataforma?**
+- **Q7. Como ele utiliza a ferramenta?**
+- **Q8. Quais dados são processados pelo sistema?**
+- **Q9. Quais funcionalidades são utilizadas?**
+- **Q10. Qual resultado é obtido após o uso?**
 
 ---
 
 ## 3. História Reformulada com Respostas Sinalizadas
 
-Poliana, pesquisadora em mobilidade urbana e comportamento visual [Q1], enfrenta dificuldades para obter dados estruturados sobre padrões reais de atenção de motoristas [Q2].
+Poliana, pesquisadora em mobilidade urbana [Q1], atua em estudos acadêmicos sobre comportamento no trânsito [Q2]. Ela enfrenta dificuldades para coletar dados estruturados sobre padrões reais de atenção visual [Q3].
 
-Ao identificar na plataforma uma fonte organizada de dados comportamentais, decidiu utilizá-la como suporte metodológico para suas pesquisas [Q3].
+Essa limitação impacta a robustez metodológica de suas pesquisas [Q4]. Seu objetivo é obter dados confiáveis e comparáveis para análise científica [Q5].
 
-Ela acessa o dashboard administrativo para acompanhar métricas agregadas e indicadores de uso [Q4], analisando dados anonimizados como padrões de fixação, tempo de antecipação e comportamento em mudanças de faixa [Q5].
+Ao conhecer a plataforma, decidiu utilizá-la como suporte metodológico [Q6]. Ela acessa o dashboard administrativo para acompanhar métricas agregadas e indicadores de uso [Q7].
 
-Utiliza funcionalidades de exportação de relatórios consolidados para integrar às suas análises científicas [Q6].
+O sistema disponibiliza dados anonimizados como padrões de fixação, tempo de antecipação e comportamento em mudanças de faixa [Q8]. Poliana utiliza funcionalidades de exportação de relatórios consolidados [Q9].
 
-Como resultado, passa a dispor de dados estruturados e comparáveis que fortalecem a qualidade de suas investigações acadêmicas [Q7].
+Com isso, passa a integrar dados estruturados às suas análises, fortalecendo suas pesquisas acadêmicas [Q10].
 
 ---
