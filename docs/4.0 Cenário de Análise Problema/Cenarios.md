@@ -4,6 +4,9 @@
 
 # 👤 Persona 1 – Gustavo
 
+### Objetivo
+Permitir que Gustavo identifique lacunas em seu padrão de atenção visual durante a condução, especialmente em situações críticas como mudanças de faixa e cruzamentos com o intuito de se sentir mais seguro no trânsito.
+
 ## 1. História Inicial
 
 Gustavo tem 22 anos e dirige todos os dias para a faculdade.  
@@ -45,6 +48,9 @@ Com base nas análises, passou a antecipar melhor suas checagens de retrovisor e
 ---
 
 # 👤 Persona 2 – Rogério
+
+### Objetivo
+Permitir que Rogério valide objetivamente seu padrão de atenção ao volante, especialmente em situações críticas e sob condições adversas, fornecendo métricas confiáveis e relatórios exportáveis que comprovem seu desempenho, revelem comportamentos automáticos não percebidos e orientem ajustes para atender às exigências da política de segurança da empresa.
 
 ## 1. História Inicial
 
@@ -92,6 +98,9 @@ Com base nas análises, percebeu que reduzia a varredura lateral em condições 
 
 # 👤 Persona 3 – Bárbara
 
+### Objetivo
+Desenvolver confiança e autonomia ao dirigir, aprendendo a distribuir melhor sua atenção no trânsito, reduzir a ansiedade em situações de maior complexidade (como mudanças de faixa em rodovias) e construir, com prática e consciência, uma condução segura e tranquila no dia a dia.
+
 ## 1. História Inicial
 
 Bárbara tem 19 anos e tirou a carteira há poucos meses.
@@ -136,6 +145,9 @@ Com o uso contínuo, passou a antecipar melhor suas checagens visuais e reduziu 
 ---
 
 # 👤 Persona 4 – Poliana
+
+### Objetivo
+Produzir pesquisa científica com maior validade e impacto, superando limitações metodológicas tradicionais e contribuindo para o avanço do conhecimento sobre comportamento visual no trânsito por meio de dados empíricos robustos, comparáveis e representativos da condução real.
 
 ## 1. História Inicial
 
