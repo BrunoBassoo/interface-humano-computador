@@ -26,15 +26,24 @@ Sua participação é **voluntária** e **anônima**. Não solicitamos dados que
 
 **Q2.** Faixa etária:
 
-- ( ) ≤ 24 · ( ) 25–34 · ( ) 35–44 · ( ) 45+
+- ( ) ≤ 24 
+- ( ) 25–34
+- ( ) 35–44
+- ( ) 45+
 
 **Q3.** Grau de instrução:
 
-- ( ) Ensino médio · ( ) Superior · ( ) Pós-graduação
+- ( ) Ensino médio
+- ( ) Superior
+- ( ) Pós-graduação
 
 **Q4.** Se atua profissionalmente na área, há quanto tempo? *(pular se não aplicável)*
 
-- ( ) Não aplicável · ( ) &lt; 1 ano · ( ) 1–3 · ( ) 4–7 · ( ) 8+ anos
+- ( ) Não aplicável
+- ( ) &lt; 1 ano
+- ( ) 1–3
+- ( ) 4–7
+- ( ) 8+ anos
 
 ---
 
@@ -43,11 +52,17 @@ Sua participação é **voluntária** e **anônima**. Não solicitamos dados que
 
 **Q5.** Como você avalia seu uso cotidiano de sites e aplicativos?
 
-- ( ) Básico · ( ) Intermediário · ( ) Avançado · ( ) Especialista / TI
+- ( ) Básico -
+- ( ) Intermediário -
+- ( ) Avançado -
+- ( ) Especialista / TI
 
 **Q6.** Você já enviou **vídeos** grandes pela internet (ex.: backup, rede social, trabalho)?
 
-- ( ) Sim, com frequência · ( ) Sim, às vezes · ( ) Raramente · ( ) Nunca
+- ( ) Sim, com frequência
+- ( ) Sim, às vezes
+- ( ) Raramente
+- ( ) Nunca
 
 **Q7.** Marque o que já usou *(várias opções)*:
 
@@ -72,7 +87,11 @@ Sua participação é **voluntária** e **anônima**. Não solicitamos dados que
 
 **Q10.** Com que frequência faria sentido usar um sistema que compara seu olhar (ou de motoristas) com a **predição de uma IA**?
 
-- ( ) Nunca · ( ) Raramente · ( ) Mensalmente · ( ) Semanalmente · ( ) Diariamente
+- ( ) Nunca 
+- ( ) Raramente
+- ( ) Mensalmente
+- ( ) Semanalmente
+- ( ) Diariamente
 
 **Q11.** Quais ações são **importantes** numa plataforma como o BVRAI? *(várias)*
 
@@ -92,7 +111,10 @@ Sua participação é **voluntária** e **anônima**. Não solicitamos dados que
 
 **Q13.** Quanto tempo você toparia gastar aprendendo a usar na **primeira vez**?
 
-- ( ) Menos de 5 min · ( ) 5–15 min · ( ) 15–30 min · ( ) Mais de 30 min
+- ( ) Menos de 5 min
+- ( ) 5–15 min
+- ( ) 15–30 min
+- ( ) Mais de 30 min
 
 ---
 
@@ -118,7 +140,8 @@ Sua participação é **voluntária** e **anônima**. Não solicitamos dados que
 
 **Q17.** Autorizo o uso **anônimo** das minhas respostas no trabalho acadêmico (IHC/TCC).
 
-- ( ) Sim · ( ) Não
+- ( ) Sim
+- ( ) Não
 
 ---
 
