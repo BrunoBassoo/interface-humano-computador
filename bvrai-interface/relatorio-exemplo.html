@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de Atenção Visual — BVRAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #fff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --accent: #0d9488;
+      --accent-light: #ccfbf1;
+      --warning: #ea580c;
+      --warning-light: #ffedd5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    .report {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--panel);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .report-header {
+      background: linear-gradient(135deg, #0f766e, #0d9488);
+      color: #fff;
+      padding: 2rem 2.5rem;
+    }
+
+    .report-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .report-header p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: 0.35rem;
+    }
+
+    .report-body { padding: 2rem 2.5rem; }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .meta dt { color: var(--text-muted); font-weight: 500; }
+    .meta dd { font-family: "JetBrains Mono", monospace; margin-top: 0.2rem; }
+
+    .grade-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--accent-light);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .grade-box .letter {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .grade-box p { font-size: 0.9rem; color: var(--text); }
+
+    h2 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin: 1.75rem 0 0.75rem;
+      padding-bottom: 0.35rem;
+    }
+
+    .report-body > h2:first-of-type { margin-top: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 0.75rem 0;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--bg);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .heatmap-preview {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 16/10;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+      margin: 1rem 0;
+      border: 1px solid var(--border);
+    }
+
+    .heatmap-preview::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 40% at 50% 45%, rgba(13, 148, 136, 0.5), transparent),
+        radial-gradient(ellipse 25% 18% at 28% 60%, rgba(234, 88, 12, 0.4), transparent);
+    }
+
+    .heatmap-preview span {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0.75rem;
+      font-size: 0.7rem;
+      font-family: "JetBrains Mono", monospace;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .recommendations {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .recommendations li {
+      padding: 0.6rem 0 0.6rem 1.75rem;
+      position: relative;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .recommendations li:last-child { border-bottom: none; }
+
+    .recommendations li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .footer-note {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">← Voltar para a plataforma</a>
+
+  <div class="report">
+    <header class="report-header">
+      <h1>Relatório de Atenção Visual</h1>
+      <p>Análise pós-viagem · Comportamento real × predição do modelo</p>
+    </header>
+
+    <div class="report-body">
+      <dl class="meta">
+        <div>
+          <dt>Usuário / Sessão</dt>
+          <dd>Gustavo A. — Sessão 12/03/2025 (manhã)</dd>
+        </div>
+        <div>
+          <dt>Período analisado</dt>
+          <dd>12/03/2025 07:42 – 08:18</dd>
+        </div>
+        <div>
+          <dt>Relatório gerado em</dt>
+          <dd>17/03/2025 14:32</dd>
+        </div>
+        <div>
+          <dt>ID do relatório</dt>
+          <dd>RPT-BVRAI-20250317-8842</dd>
+        </div>
+      </dl>
+
+      <div class="grade-box">
+        <span class="letter">B+</span>
+        <div>
+          <p><strong>Nota orientativa da sessão</strong></p>
+          <p>Desempenho acima da média. Boa distribuição de atenção; ponto de melhoria em áreas de travessia de pedestres.</p>
+        </div>
+      </div>
+
+      <h2>1. Resumo da sessão</h2>
+      <p>
+        Nesta sessão foram analisados <strong>36 minutos</strong> de condução em ambiente urbano (trânsito moderado).
+        O modelo comparou seu padrão de fixação visual com a predição gerada a partir dos seus dados de treinamento anteriores.
+        A concordância geral foi de <strong>78%</strong> nas regiões de interesse críticas (cruzamentos, faixas de pedestres, retrovisores).
+      </p>
+
+      <h2>2. Métricas principais</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>Seu resultado</th>
+            <th>Predição IA</th>
+            <th>Referência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Antecipação em travessia (média)</td>
+            <td>0,42 s</td>
+            <td>0,38 s</td>
+            <td>≥ 0,35 s</td>
+          </tr>
+          <tr>
+            <td>Checagens retrovisor / mudança de faixa</td>
+            <td>12</td>
+            <td>11</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Fixagens em zona de risco (cruzamentos)</td>
+            <td>94%</td>
+            <td>96%</td>
+            <td>≥ 90%</td>
+          </tr>
+          <tr>
+            <td>Tempo médio de fixação (área central)</td>
+            <td>1,2 s</td>
+            <td>1,1 s</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Mapa de atenção (exemplo)</h2>
+      <p>Regiões mais observadas durante a sessão (amarelo/verde = maior tempo de fixação; laranja = ponto de atenção tardia em uma ocorrência).</p>
+      <div class="heatmap-preview">
+        <span>Heatmap consolidado — sessão 12/03/2025</span>
+      </div>
+
+      <h2>4. Recomendações</h2>
+      <ul class="recommendations">
+        <li>Reforçar a varredura visual em <strong>áreas de travessia de pedestres</strong> antes de mudanças de faixa próximas a cruzamentos.</li>
+        <li>Manter o padrão atual de checagem de retrovisor; a sessão está alinhada ao que o modelo espera com base no seu histórico.</li>
+        <li>Em condições de tráfego intenso, considerar pausas breves para evitar fadiga de atenção em trajetos longos.</li>
+      </ul>
+
+      <p class="footer-note">
+        Este relatório é gerado automaticamente pela plataforma BVRAI (Behavioral Visual Replicating AI) e tem fins informativos e de reflexão pós-viagem.
+        Não substitui avaliação médica ou profissional. Dados anonimizados podem ser utilizados para pesquisa e melhoria do modelo.
+        FEI — Interface Humano-Computador (CC8122).
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BVRAI — Behavioral Visual Replicating AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0c1118;
+      --bg-panel: #141b26;
+      --bg-card: #1a2332;
+      --border: #2a3544;
+      --text: #e8edf4;
+      --text-muted: #8b9cb3;
+      --accent: #3dd9c3;
+      --accent-dim: #2a9d8f;
+      --warning: #f4a261;
+      --road: #1e3a5f;
+      --focus: #e76f51;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .app {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem 3rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+    }
+
+    .brand h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border: 1px solid var(--accent-dim);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      background: rgba(61, 217, 195, 0.08);
+    }
+
+    /* Abas */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tabs button {
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      color: var(--text-muted);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .tabs button:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    .tabs button[aria-selected="true"] {
+      background: var(--bg-card);
+      color: var(--accent);
+      border-color: var(--accent-dim);
+    }
+
+    .panel {
+      display: none;
+      animation: fade 0.25s ease;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .panel h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .panel > p.lead {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 65ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .card p, .card li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .card ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      background: var(--bg-panel);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--accent);
+    }
+
+    .stat span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Upload */
+    .upload-zone {
+      border: 2px dashed var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: var(--bg-panel);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .upload-zone:hover {
+      border-color: var(--accent-dim);
+      background: rgba(61, 217, 195, 0.04);
+    }
+
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.7rem 1.25rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+      color: var(--bg-deep);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 4px 20px rgba(61, 217, 195, 0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .status-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .status-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .pill.ok { background: rgba(61, 217, 195, 0.2); color: var(--accent); }
+    .pill.run { background: rgba(244, 162, 97, 0.2); color: var(--warning); }
+    .pill.queue { background: rgba(139, 156, 179, 0.2); color: var(--text-muted); }
+
+    /* Dashboard análise — mock heatmap */
+    .compare {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .heatmap-mock {
+      aspect-ratio: 16/10;
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--road) 0%, #0d1520 100%);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .heatmap-mock::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 45% 35% at 55% 42%, rgba(61, 217, 195, 0.45), transparent),
+        radial-gradient(ellipse 25% 20% at 30% 55%, rgba(231, 111, 81, 0.35), transparent),
+        radial-gradient(ellipse 20% 15% at 75% 38%, rgba(61, 217, 195, 0.25), transparent);
+    }
+
+    .heatmap-mock span {
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0.75rem;
+      font-size: 0.7rem;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--text-muted);
+      z-index: 1;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    select {
+      font-family: inherit;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      color: var(--text);
+      font-size: 0.875rem;
+    }
+
+    .toggle-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+
+    .toggle-row label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .metrics-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--bg-panel);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .metrics-bar div {
+      font-size: 0.85rem;
+    }
+
+    .metrics-bar strong {
+      color: var(--accent);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    /* Relatórios */
+    .form-row {
+      margin-bottom: 1rem;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-row input[type="date"] {
+      width: 100%;
+      max-width: 220px;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      color: var(--text);
+      font-family: inherit;
+    }
+
+    .format-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    /* Admin */
+    .admin-chart {
+      height: 180px;
+      background: var(--bg-panel);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-top: 0.75rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+
+    .bar {
+      width: 12%;
+      max-width: 48px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-dim));
+      border-radius: 6px 6px 0 0;
+      opacity: 0.85;
+    }
+
+    .bar:nth-child(2) { height: 55%; }
+    .bar:nth-child(3) { height: 78%; }
+    .bar:nth-child(4) { height: 45%; }
+    .bar:nth-child(5) { height: 92%; }
+    .bar:nth-child(6) { height: 68%; }
+    .bar:nth-child(7) { height: 82%; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    /* Login */
+    #login-screen {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 217, 195, 0.15), transparent), var(--bg-deep);
+    }
+
+    #login-screen.hidden {
+      display: none;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 420px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .login-box h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .login-box .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .login-box label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg-panel);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .login-box input:focus {
+      outline: none;
+      border-color: var(--accent-dim);
+    }
+
+    .login-error {
+      font-size: 0.85rem;
+      color: #f87171;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .login-error.show {
+      display: block;
+    }
+
+    .login-hint {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--bg-panel);
+      border-radius: 10px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      border: 1px dashed var(--border);
+    }
+
+    .login-hint strong {
+      color: var(--accent);
+    }
+
+    #main-app.hidden {
+      display: none;
+    }
+
+    .header-user {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .user-pill {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 0.35rem 0.75rem;
+      background: var(--bg-panel);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .user-pill .role-tag {
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 0.35rem;
+    }
+
+    .btn-sair {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.75rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-sair:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    .tab-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-screen" aria-label="Entrar na plataforma">
+    <div class="login-box">
+      <h2>Entrar no BVRAI</h2>
+      <p class="subtitle">Use uma conta de teste abaixo.</p>
+      <div id="login-error" class="login-error" role="alert">Usuário ou senha incorretos.</div>
+      <form id="login-form" autocomplete="on">
+        <label for="login-user">Usuário</label>
+        <input type="text" id="login-user" name="username" required autocomplete="username" placeholder="usuario ou admin" />
+        <label for="login-pass">Senha</label>
+        <input type="password" id="login-pass" name="password" required autocomplete="current-password" placeholder="••••••••" />
+        <button type="submit" class="btn btn-primary" style="width:100%">Entrar</button>
+      </form>
+      <div class="login-hint">
+        <strong>Contas de teste (protótipo):</strong><br />
+        <strong>Motorista:</strong> usuário <code style="color:var(--text)">usuario</code> · senha <code style="color:var(--text)">123456</code><br />
+        <strong>Admin:</strong> usuário <code style="color:var(--text)">admin</code> · senha <code style="color:var(--text)">admin123</code>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-app" class="app hidden">
+    <header>
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">👁</div>
+        <div>
+          <h1>BVRAI</h1>
+          <span>Behavioral Visual Replicating AI</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <span class="badge">Análise pós-viagem · Navegador</span>
+        <span id="user-pill" class="user-pill"></span>
+        <button type="button" class="btn-sair" id="btn-sair">Sair</button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Seções da plataforma">
+      <button type="button" role="tab" id="tab-inicio" aria-selected="true" aria-controls="panel-inicio">Início</button>
+      <button type="button" role="tab" id="tab-videos" aria-selected="false" aria-controls="panel-videos">Vídeos</button>
+      <button type="button" role="tab" id="tab-analise" class="tab-user-only" aria-selected="false" aria-controls="panel-analise">Minha análise</button>
+      <button type="button" role="tab" id="tab-relatorios" aria-selected="false" aria-controls="panel-relatorios">Relatórios</button>
+      <button type="button" role="tab" id="tab-admin" class="tab-admin-only tab-hidden" aria-selected="false" aria-controls="panel-admin">Administração</button>
+      <button type="button" role="tab" id="tab-sobre" aria-selected="false" aria-controls="panel-sobre">Sobre</button>
+    </nav>
+
+    <!-- 1. Início -->
+    <section id="panel-inicio" class="panel active" role="tabpanel" aria-labelledby="tab-inicio">
+      <div id="inicio-user">
+        <h2>Bem-vindo, <span id="inicio-nome-user">motorista</span></h2>
+        <p class="lead">
+          Envie seus vídeos, acompanhe <strong>Minha análise</strong> (seu olhar × IA) e baixe seu relatório — tudo em ambiente controlado, <strong>após a gravação</strong>.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Seu fluxo</h3>
+            <p><strong>Vídeos</strong> → treino ou predição · <strong>Minha análise</strong> → heatmaps e métricas · <strong>Relatórios</strong> → PDF ou CSV só dos seus dados.</p>
+          </div>
+          <div class="card">
+            <h3>Dica</h3>
+            <p>Linguagem simples e indicadores claros. A aba <strong>Administração</strong> não aparece para sua conta — só para gestores da plataforma.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Suas sessões</strong><span>2 gravadas neste mês (demo)</span></div>
+          <div class="stat"><strong>IA</strong><span>Modelo calibrado ao seu padrão visual</span></div>
+          <div class="stat"><strong>Web</strong><span>Acesso seguro via navegador</span></div>
+        </div>
+      </div>
+      <div id="inicio-admin" class="tab-hidden">
+        <h2>Painel administrativo</h2>
+        <p class="lead">
+          Olá, <strong id="inicio-nome-admin">admin</strong>. Você vê <strong>todos os envios</strong>, gera relatórios de <strong>qualquer motorista</strong> e acessa métricas globais em <strong>Administração</strong>.
+          A visão individual “Minha análise” fica restrita às contas de motorista.
+        </p>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Atalhos</h3>
+            <p><strong>Vídeos</strong> — fila e status de toda a plataforma · <strong>Relatórios</strong> — exportação por usuário · <strong>Administração</strong> — KPIs e monitoramento.</p>
+          </div>
+          <div class="card">
+            <h3>Responsabilidade</h3>
+            <p>Dados agregados e anonimização para pesquisa; relatórios individuais apenas com permissão de uso conforme política da organização.</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>128</strong><span>Usuários ativos (30 dias)</span></div>
+          <div class="stat"><strong>1.4k</strong><span>Vídeos na plataforma</span></div>
+          <div class="stat"><strong>Admin</strong><span>API v2.1 · MySQL · Power BI</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Vídeos -->
+    <section id="panel-videos" class="panel" role="tabpanel" aria-labelledby="tab-videos" hidden>
+      <div id="videos-user">
+        <h2>Enviar vídeo</h2>
+        <p class="lead">
+          Envie material para <strong>treinar</strong> o modelo com seu padrão visual ou para <strong>predição</strong> em um novo trajeto.
+          Acompanhe <strong>seus</strong> envios abaixo.
+        </p>
+        <div class="card">
+          <div class="radio-group">
+            <label><input type="radio" name="tipo" value="treino" checked /> Vídeo para treinamento do modelo</label>
+            <label><input type="radio" name="tipo" value="predicao" /> Vídeo para predição</label>
+          </div>
+          <div class="upload-zone">
+            <p><strong>Arraste o arquivo</strong> ou clique para selecionar</p>
+            <p style="font-size:0.8rem;margin-top:0.5rem;color:var(--text-muted)">Formatos sugeridos: MP4 · Eye tracker quando aplicável</p>
+            <button type="button" class="btn btn-ghost" style="margin-top:1rem">Escolher arquivo</button>
+          </div>
+          <button type="button" class="btn btn-primary">Confirmar envio</button>
+        </div>
+        <h3 style="margin-top:1.5rem;font-size:1rem;">Meus envios</h3>
+        <ul class="status-list card" style="padding:0 1.25rem;">
+          <li><span>sessão_20250312_manhã.mp4</span><span class="pill ok">Concluído</span></li>
+          <li><span>predicao_rodovia.mp4</span><span class="pill queue">Na fila</span></li>
+        </ul>
+      </div>
+      <div id="videos-admin" class="tab-hidden">
+        <h2>Fila global de vídeos</h2>
+        <p class="lead">
+          Visão do <strong>administrador</strong>: todos os uploads da plataforma, usuário de origem e status do pipeline de processamento.
+        </p>
+        <div class="card" style="margin-bottom:1rem">
+          <p style="font-size:0.9rem;color:var(--text-muted)">Upload em nome de outro usuário seria feito via API ou painel interno (protótipo: apenas lista).</p>
+        </div>
+        <h3 style="font-size:1rem;">Todos os envios (recentes)</h3>
+        <ul class="status-list card" style="padding:0 1.25rem;">
+          <li><span><strong>usuario</strong> · sessão_20250312_manhã.mp4</span><span class="pill ok">Concluído</span></li>
+          <li><span><strong>frota_SP</strong> · treino_frota_batch2.mp4</span><span class="pill run">Processando</span></li>
+          <li><span><strong>usuario</strong> · predicao_rodovia.mp4</span><span class="pill queue">Na fila</span></li>
+          <li><span><strong>pesquisa_lab</strong> · dataset_batch07.mp4</span><span class="pill ok">Concluído</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Minha análise (só motorista) -->
+    <section id="panel-analise" class="panel tab-user-only" role="tabpanel" aria-labelledby="tab-analise" hidden>
+      <h2>Dashboard de análise crítica individual</h2>
+      <p class="lead">
+        Visualize métricas da sua sessão e compare <strong>comportamento real</strong> com a <strong>predição da IA</strong> (fixações, antecipação em cruzamentos, mudança de faixa).
+      </p>
+      <div class="toolbar">
+        <select aria-label="Sessão">
+          <option>Sessão — 12/03/2025 manhã</option>
+          <option>Sessão — 08/03/2025 rodovia</option>
+        </select>
+        <select aria-label="Período">
+          <option>Última sessão</option>
+          <option>Últimos 7 dias</option>
+          <option>Últimos 30 dias</option>
+        </select>
+      </div>
+      <div class="toggle-row">
+        <label><input type="checkbox" checked /> Mapa de atenção real</label>
+        <label><input type="checkbox" checked /> Previsão da IA</label>
+        <label><input type="checkbox" /> Sobreposição comparativa</label>
+      </div>
+      <div class="compare">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="heatmap-mock" style="border-radius:0">
+            <span>Olhar real (heatmap)</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div class="heatmap-mock" style="border-radius:0;filter:hue-rotate(40deg)">
+            <span>Predição IA</span>
+          </div>
+        </div>
+      </div>
+      <div class="metrics-bar">
+        <div>Antecipação em travessia: <strong>0,42 s</strong> (usuário) · <strong>0,38 s</strong> (IA)</div>
+        <div>Checagens retrovisor/faixa: <strong>12</strong> · modelo <strong>11</strong></div>
+        <div>Nota orientativa sessão: <strong>B+</strong></div>
+      </div>
+    </section>
+
+    <!-- 4. Relatórios -->
+    <section id="panel-relatorios" class="panel" role="tabpanel" aria-labelledby="tab-relatorios" hidden>
+      <h2 id="rel-titulo">Extração de relatório individual</h2>
+      <p class="lead" id="rel-lead">
+        Gere relatório de desempenho para arquivo ou análise estatística — alinhado ao fluxo GOMS (usuário, período, formato, exportar).
+      </p>
+      <div class="card">
+        <div class="form-row" id="rel-user-wrap">
+          <label for="rel-user">Usuário / sessão</label>
+          <select id="rel-user" style="max-width:420px;width:100%">
+            <option value="self">Eu — todas as sessões</option>
+            <option value="sess1">Eu — sessão 12/03/2025</option>
+          </select>
+        </div>
+        <div class="grid-2" style="margin-top:1rem">
+          <div class="form-row">
+            <label for="d1">Data inicial</label>
+            <input type="date" id="d1" value="2025-03-01" />
+          </div>
+          <div class="form-row">
+            <label for="d2">Data final</label>
+            <input type="date" id="d2" value="2025-03-17" />
+          </div>
+        </div>
+        <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.75rem">PDF: visualização estruturada · CSV: análise em planilha / Power BI</p>
+        <div class="format-btns">
+          <a href="relatorio-exemplo.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-decoration:none;display:inline-block;text-align:center">Gerar PDF</a>
+          <button type="button" class="btn btn-ghost">Exportar CSV</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Admin -->
+    <section id="panel-admin" class="panel" role="tabpanel" aria-labelledby="tab-admin" hidden>
+      <h2>Dashboard do administrador</h2>
+      <p class="lead">
+        Visibilidade do andamento da plataforma: usuários ativos, volume de vídeos, status de treinamentos e uso.
+      </p>
+      <div class="stats">
+        <div class="stat"><strong>128</strong><span>Usuários ativos (30 dias)</span></div>
+        <div class="stat"><strong>1.4k</strong><span>Vídeos enviados</span></div>
+        <div class="stat"><strong>94%</strong><span>Treinamentos OK</span></div>
+      </div>
+      <div class="grid-2" style="margin-top:1.25rem">
+        <div class="card">
+          <h3>Utilização semanal</h3>
+          <div class="admin-chart" aria-hidden="true">
+            <div class="bar" style="height:40%"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <p style="margin-top:0.75rem;font-size:0.85rem">Acessos recentes e taxa por usuário (detalhamento clicável no produto final).</p>
+        </div>
+        <div class="card">
+          <h3>Monitoramento</h3>
+          <ul>
+            <li>Falhas no processamento: <strong style="color:var(--warning)">3</strong> fila de retry</li>
+            <li>Baixa adesão (alertas): 2 contas inativas &gt; 60 dias</li>
+            <li>API / versão do modelo: <span style="font-family:JetBrains Mono;font-size:0.85rem">v2.1-stable</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Sobre -->
+    <section id="panel-sobre" class="panel" role="tabpanel" aria-labelledby="tab-sobre" hidden>
+      <h2>Sobre o projeto (TCC / IHC)</h2>
+      <p class="lead">
+        <strong>Análise de comportamento visual de condutores em ambiente real</strong> — FEI, CC8122, orientação acadêmica Victor Varela.
+        Objetivo: IA que aprende e prevê o padrão de atenção visual de um motorista em trânsito real.
+      </p>
+      <div class="card">
+        <h3>Equipe</h3>
+        <ul>
+          <li>Bruno Arthur Basso Silva — 22.123.067-5</li>
+          <li>Gabriela Molina Ciocci — 22.222.032-9</li>
+          <li>Guilherme Barboza de Albuquerque — 22.224.024-4</li>
+          <li>Sergio Martins de Oliveira Santos — 22.222.021-2</li>
+        </ul>
+      </div>
+      <div class="grid-2" style="margin-top:1rem">
+        <div class="card">
+          <h3>Funcionalidades (visão usuário)</h3>
+          <ul>
+            <li>Dashboard individual (você × IA)</li>
+            <li>Dashboard administrativo</li>
+            <li>Relatório individual exportável</li>
+            <li>Upload: treino e predição</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Contexto IHC</h3>
+          <p>Uso após gravação, reflexivo e avaliativo. Personas: Gustavo (condutor), Rogério (segurança veicular), Bárbara (pesquisa VA), Poliana (integração produto).</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      BVRAI — protótipo de interface para documentação IHC · Não substitui sistema em produção.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var STORAGE_KEY = 'bvrai_session';
+      var ACCOUNTS = {
+        usuario: { pass: '123456', role: 'user', displayName: 'Gustavo', nomeInicio: 'Gustavo' },
+        admin: { pass: 'admin123', role: 'admin', displayName: 'Administrador', nomeInicio: 'Admin' }
+      };
+
+      var panels = document.querySelectorAll('.panel');
+      var loginScreen = document.getElementById('login-screen');
+      var mainApp = document.getElementById('main-app');
+      var loginForm = document.getElementById('login-form');
+      var loginError = document.getElementById('login-error');
+      var userPill = document.getElementById('user-pill');
+      var btnSair = document.getElementById('btn-sair');
+
+      function getVisibleTabs() {
+        return Array.prototype.slice.call(document.querySelectorAll('.tabs [role="tab"]')).filter(function (t) {
+          return !t.classList.contains('tab-hidden');
+        });
+      }
+
+      function activate(id) {
+        var tabs = getVisibleTabs();
+        var allTabEls = document.querySelectorAll('.tabs [role="tab"]');
+        allTabEls.forEach(function (t) {
+          var tid = t.id.replace('tab-', '');
+          var on = tid === id && !t.classList.contains('tab-hidden');
+          t.setAttribute('aria-selected', on);
+        });
+        panels.forEach(function (p) {
+          var on = p.id === 'panel-' + id;
+          if (on && p.classList.contains('tab-hidden')) return;
+          p.classList.toggle('active', on);
+          p.hidden = !on;
+        });
+      }
+
+      function bindTabs() {
+        document.querySelectorAll('.tabs [role="tab"]').forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            if (tab.classList.contains('tab-hidden')) return;
+            var id = tab.id.replace('tab-', '');
+            activate(id);
+          });
+        });
+        document.querySelector('.tabs').addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          var tabs = getVisibleTabs();
+          var i = tabs.indexOf(document.activeElement);
+          if (i < 0) return;
+          var next = e.key === 'ArrowRight' ? i + 1 : i - 1;
+          if (next < 0) next = tabs.length - 1;
+          if (next >= tabs.length) next = 0;
+          tabs[next].focus();
+          tabs[next].click();
+        });
+      }
+
+      function applyRole(role, acc) {
+        var tabAdmin = document.getElementById('tab-admin');
+        var tabAnalise = document.getElementById('tab-analise');
+        var panelAnalise = document.getElementById('panel-analise');
+        var relUser = document.getElementById('rel-user');
+        var relTitulo = document.getElementById('rel-titulo');
+        var relLead = document.getElementById('rel-lead');
+
+        if (role === 'user') {
+          tabAdmin.classList.add('tab-hidden');
+          tabAnalise.classList.remove('tab-hidden');
+          document.getElementById('inicio-user').classList.remove('tab-hidden');
+          document.getElementById('inicio-admin').classList.add('tab-hidden');
+          document.getElementById('videos-user').classList.remove('tab-hidden');
+          document.getElementById('videos-admin').classList.add('tab-hidden');
+          document.getElementById('inicio-nome-user').textContent = acc.nomeInicio;
+          userPill.innerHTML = acc.displayName + ' <span class="role-tag">Motorista</span>';
+          relTitulo.textContent = 'Seu relatório';
+          relLead.textContent = 'Gere PDF ou CSV apenas dos seus dados e sessões.';
+          relUser.innerHTML =
+            '<option value="self">Eu — todas as sessões</option>' +
+            '<option value="sess1">Eu — sessão 12/03/2025</option>';
+        } else {
+          tabAnalise.classList.add('tab-hidden');
+          tabAdmin.classList.remove('tab-hidden');
+          panelAnalise.classList.add('tab-hidden');
+          document.getElementById('inicio-user').classList.add('tab-hidden');
+          document.getElementById('inicio-admin').classList.remove('tab-hidden');
+          document.getElementById('videos-user').classList.add('tab-hidden');
+          document.getElementById('videos-admin').classList.remove('tab-hidden');
+          document.getElementById('inicio-nome-admin').textContent = acc.nomeInicio;
+          userPill.innerHTML = acc.displayName + ' <span class="role-tag">Admin</span>';
+          relTitulo.textContent = 'Relatórios (qualquer motorista)';
+          relLead.textContent = 'Selecione o condutor e o período para exportar PDF ou CSV (visão administrativa).';
+          relUser.innerHTML =
+            '<option value="all">Todos os usuários (agregado)</option>' +
+            '<option value="usuario">Motorista: usuario (Gustavo)</option>' +
+            '<option value="frota">Conta: frota_SP</option>' +
+            '<option value="lab">Conta: pesquisa_lab</option>';
+        }
+
+        activate('inicio');
+        document.getElementById('tab-inicio').setAttribute('aria-selected', 'true');
+      }
+
+      function showApp(session) {
+        loginScreen.classList.add('hidden');
+        mainApp.classList.remove('hidden');
+        loginError.classList.remove('show');
+        applyRole(session.role, ACCOUNTS[session.login] || { displayName: session.login, nomeInicio: session.login });
+      }
+
+      function showLogin() {
+        sessionStorage.removeItem(STORAGE_KEY);
+        mainApp.classList.add('hidden');
+        loginScreen.classList.remove('hidden');
+        document.getElementById('login-pass').value = '';
+      }
+
+      loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var u = document.getElementById('login-user').value.trim().toLowerCase();
+        var p = document.getElementById('login-pass').value;
+        var acc = ACCOUNTS[u];
+        if (!acc || acc.pass !== p) {
+          loginError.classList.add('show');
+          return;
+        }
+        var session = { login: u, role: acc.role };
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(session));
+        showApp(session);
+      });
+
+      btnSair.addEventListener('click', showLogin);
+
+      bindTabs();
+
+      try {
+        var raw = sessionStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          var s = JSON.parse(raw);
+          if (s && s.login && ACCOUNTS[s.login] && s.role === ACCOUNTS[s.login].role) {
+            showApp(s);
+            return;
+          }
+        }
+      } catch (err) {}
+
+      mainApp.classList.add('hidden');
+      loginScreen.classList.remove('hidden');
+    })();
+  </script>
+</body>
+</html>
