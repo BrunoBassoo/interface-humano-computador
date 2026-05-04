@@ -70,7 +70,7 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 ### Tópico 2 - Análise de Concorrência
 
-#### [1.1 Empresas Concorrentes](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2.0%20An%C3%A1lise%20de%20Concorr%C3%AAncia%20/Softwares.md)
+#### [2.1 Empresas Concorrentes](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2.0%20An%C3%A1lise%20de%20Concorr%C3%AAncia%20/Softwares.md)
 
 ### Tópico 3 - Personas
 
