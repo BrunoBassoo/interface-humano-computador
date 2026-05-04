@@ -68,19 +68,36 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 ## Desenvolvimento
 
-### 1) Análise de Concorrência
+### Tópico 2 - Análise de Concorrência
 
 #### [1.1 Empresas Concorrentes](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/2.0%20An%C3%A1lise%20de%20Concorr%C3%AAncia%20/Softwares.md)
 
-### 2) Personas
+### Tópico 3 - Personas
 
-#### [2.1 Características](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Caracter%C3%ADsticas.md)
+#### [3.1 Características](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Caracter%C3%ADsticas.md)
 
-#### [2.2 Jornada do Usuário](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Jornada%20de%20Usu%C3%A1rio.md)
+#### [3.2 Jornada do Usuário](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Jornada%20de%20Usu%C3%A1rio.md)
 
-#### [2.3 Mapa de Empatia](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Mapas%20de%20Empatia.md)
+#### [3.3 Mapa de Empatia](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/3.0%20Personas%20/Mapas%20de%20Empatia.md)
 
-### 3) Cenário Análise Problema
+### Tópico 4 - Cenário Análise Problema
 
-#### [3.1 Cenários](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/4.0%20Cen%C3%A1rio%20de%20An%C3%A1lise%20Problema/Cenarios.md)
+#### [4 Cenários](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/4.0%20Cen%C3%A1rio%20de%20An%C3%A1lise%20Problema/Cenarios.md)
 
+### Tópico 5 - Modelos de Tarefas
+
+#### [5.1 HTA](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/5.0%20Modelos%20de%20tarefas/5.1%20HTA.md)
+
+#### [5.2 GOMS](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/5.0%20Modelos%20de%20tarefas/5.2%20GOMS.md)
+
+#### [5.3 CTT](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/5.0%20Modelos%20de%20tarefas/5.3%20CTT.md)
+
+### Tópico 6 - Prototipação de Alta Fidelidade
+
+#### [6.0 Prototipação](https://github.com/BrunoBassoo/interface-humano-computador/tree/main/bvrai-interface)
+
+### Tópico 7 - Requisitos e Ética
+
+#### [7.0 Requisitos e Ética](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/7.0%20Requisitos%20e%20%C3%89tica/README.md)
+
+#### [Questionário ](https://github.com/BrunoBassoo/interface-humano-computador/blob/main/docs/7.0%20Requisitos%20e%20%C3%89tica/Question%C3%A1rio%20-%20BVRAI.md)
