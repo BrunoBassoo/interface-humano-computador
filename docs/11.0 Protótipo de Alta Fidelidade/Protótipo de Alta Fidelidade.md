@@ -1,7 +1,5 @@
 # Protótipo de Alta Fidelidade
 
-**Status:** a fazer — capturas de tela e figuras serão inseridas nesta entrega.
-
 Protótipo operacional em navegador (`bvrai-interface`); a documentação abaixo descreve o conteúdo de cada tela até inclusão das imagens.
 
 ## Tela 01 — Autenticação
