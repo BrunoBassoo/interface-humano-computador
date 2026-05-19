@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900" width="720" height="900">
+  <defs>
+    <style>
+      text { font-family: Consolas, 'Courier New', monospace; }
+      .title  { font-size:17px; fill:#2d1b69; font-weight:700; text-anchor:middle; }
+      .sub    { font-size:11px; fill:#888; text-anchor:middle; }
+      .box-n  { font-size:12px; fill:#2d1b69; font-weight:700; text-anchor:middle; dominant-baseline:central; }
+      .box-t  { font-size:10px; fill:#333; text-anchor:start; dominant-baseline:central; }
+      .phase  { font-size:13px; fill:#5a3d9e; font-weight:700; text-anchor:middle; }
+      .edge   { stroke:#999; stroke-width:1.8; fill:none; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#999"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="900" fill="#faf8ff" rx="10"/>
+  <text x="360" y="32" class="title">Fluxograma do Teste com Usuários  BVRAI</text>
+  <text x="360" y="52" class="sub">Avaliação por observação · Entrega 14 · Barbosa e Silva (2010)</text>
+
+  <!-- PREPARAÇÃO -->
+  <text x="360" y="88" class="phase">PREPARAÇÃO</text>
+  <rect x="80" y="100" width="560" height="130" rx="10" fill="#ede9fa" stroke="#7c5cbf" stroke-width="2"/>
+  <text x="360" y="125" class="box-n">Preparar sessão</text>
+  <text x="100" y="148" class="box-t">" Recrutar participantes (personas motorista / dashboards / pesquisa)</text>
+  <text x="100" y="165" class="box-t">" Ambiente: bvrai-interface + gravação OBS + TCLE</text>
+  <text x="100" y="182" class="box-t">" Roteiro T1T5, folha de observação, questionários pré/pós</text>
+  <text x="100" y="199" class="box-t">" Teste-piloto (integrante da equipe)</text>
+
+  <line x1="360" y1="230" x2="360" y2="258" class="edge" marker-end="url(#arr)"/>
+
+  <!-- SESSÃO -->
+  <text x="360" y="278" class="phase">SESSÃO (~4560 min)</text>
+  <rect x="80" y="290" width="560" height="280" rx="10" fill="#e8f4ea" stroke="#4a9e6a" stroke-width="2"/>
+  <text x="360" y="315" class="box-n">Sessão com participante</text>
+  <text x="100" y="338" class="box-t">1. Apresentação dos objetivos (~5 min)</text>
+  <text x="100" y="355" class="box-t">2. Assinatura do TCLE</text>
+  <text x="100" y="372" class="box-t">3. Questionário pré-teste</text>
+  <text x="100" y="389" class="box-t">4. Exploração livre (~5 min)  opcional</text>
+  <text x="100" y="406" class="box-t">5. Tarefas T1T5 (observação; sem ajuda de como clicar)</text>
+  <text x="100" y="423" class="box-t">6. Questionário pós-teste (Likert 15)</text>
+  <text x="100" y="440" class="box-t">7. Entrevista breve pós-teste</text>
+  <text x="100" y="465" class="box-t" style="fill:#555;font-style:italic">Motorista: usuario/123456 · Admin (T5): admin/admin123</text>
+
+  <line x1="360" y1="570" x2="360" y2="598" class="edge" marker-end="url(#arr)"/>
+
+  <!-- RELATO -->
+  <text x="360" y="618" class="phase">RELATO DOS RESULTADOS</text>
+  <rect x="80" y="630" width="560" height="120" rx="10" fill="#fff4e6" stroke="#d4a017" stroke-width="2"/>
+  <text x="360" y="655" class="box-n">Consolidar e reprojetar</text>
+  <text x="100" y="678" class="box-t">" Tempos, erros, conclusão por tarefa</text>
+  <text x="100" y="695" class="box-t">" Eventos ” violações V01V08 (Entrega 13)</text>
+  <text x="100" y="712" class="box-t">" Comparar com metas (Entrega 8) · Plano de reprojeto</text>
+
+  <!-- Legenda -->
+  <rect x="80" y="780" width="560" height="90" rx="8" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="360" y="805" style="font-size:11px;fill:#333;text-anchor:middle;font-weight:700">Encadeamento</text>
+  <text x="100" y="828" class="box-t">Entrega 12 (DECIDE) ’ Entrega 13 (heurística) ’ Entrega 14 (este teste) ’ reprojeto</text>
+  <text x="100" y="848" class="box-t">Correções P0 da heurística preferencialmente antes da rodada formal</text>
+</svg>

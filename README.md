@@ -18,7 +18,7 @@ Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos nece
 | [11](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | [Protótipo de alta fidelidade](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | ✅ |
 | [12](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | [Planejamento de usabilidade (DECIDE)](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | ✅ |
 | [13](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | [Avaliação heurística](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | ✅ |
-| [14](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | [Avaliação por observação](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | ⏳ *a fazer* |
+| [14](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | [Avaliação por observação](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | ✅ |
 
 ## Conhecendo o Problema
 #### 1) Membros de Equipe (nome completo e número de matrícula):
@@ -145,7 +145,9 @@ O ambiente é de análise pós-evento, com foco reflexivo e avaliativo.
 
 #### [13.0 Avaliação Heurística](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md)
 
-### 14) Avaliação por Observação *(status: a fazer — sessões, registros e relatório pendentes)*
+### 14) Avaliação por Observação
+
+Sessão com **P1** (Prof. Dr. Victor Perrone de Lima Varela, orientador): 5/5 tarefas, 4,6/5 satisfação, metas da entrega 8 atingidas. Confirmação de V01, V03, V04 e V08.
 
 #### [14.0 Avaliação por Observação](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md)
 
