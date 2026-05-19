@@ -15,7 +15,7 @@ Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos nece
 | [8](docs/8.0%20Engenharia%20de%20Usabilidade/Engenharia%20de%20Usabilidade.md) | [Engenharia de usabilidade](docs/8.0%20Engenharia%20de%20Usabilidade/Engenharia%20de%20Usabilidade.md) | ✅ |
 | [9](docs/9.0%20Cenários%20de%20Interação%20e%20Design/Cenários%20de%20Interação%20e%20Design.md) | [Cenários de interação e design](docs/9.0%20Cenários%20de%20Interação%20e%20Design/Cenários%20de%20Interação%20e%20Design.md) | ✅ |
 | [10](docs/10.0%20Diagrama%20MOLIC/MOLIC.md) | [Diagrama MOLIC](docs/10.0%20Diagrama%20MOLIC/MOLIC.md) | ✅ |
-| [11](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | [Protótipo de alta fidelidade](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | ⏳ *a fazer* |
+| [11](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | [Protótipo de alta fidelidade](docs/11.0%20Protótipo%20de%20Alta%20Fidelidade/Protótipo%20de%20Alta%20Fidelidade.md) | ✅ |
 | [12](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | [Planejamento de usabilidade (DECIDE)](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | ✅ |
 | [13](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | [Avaliação heurística](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | ✅ |
 | [14](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | [Avaliação por observação](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | ⏳ *a fazer* |
