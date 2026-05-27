@@ -19,6 +19,7 @@ Projeto apresentado ao Centro Universitário FEI, como parte dos requisitos nece
 | [12](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | [Planejamento de usabilidade (DECIDE)](docs/12.0%20Planejamento%20da%20Avaliação%20DECIDE/Planejamento%20da%20avaliação%20DECIDE.md) | ✅ |
 | [13](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | [Avaliação heurística](docs/13.0%20Avaliação%20Heurística/Avaliação%20Heurística.md) | ✅ |
 | [14](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | [Avaliação por observação](docs/14.0%20Avaliação%20por%20Observação/Avaliação%20por%20Observação.md) | ✅ |
+| [15](https://www.youtube.com/watch?v=hN03rxgIb84) | [Usuário testando a plataforma](https://www.youtube.com/watch?v=hN03rxgIb84) | ✅ |
 
 ## Conhecendo o Problema
 #### 1) Membros de Equipe (nome completo e número de matrícula):
